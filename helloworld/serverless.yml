@@ -1,8 +1,8 @@
-# CloudFormationのStack名とLambdaの名前になる
+# CloudFormationのStackの名前になる
 service:
   name: aws-nodejs-typescript
 
-# ServerlessFWにプラグイン名を入れる
+# ServerlessFWにプラグインを入れる
 plugins:
   - serverless-webpack
 
@@ -15,7 +15,9 @@ provider:
 
 # Lambdaのエントリポイント
 functions:
+  # Lambdaの名前
   hello:
+    # クラスへのPATH:関数名
     handler: handler.hello
     events:
       - http:

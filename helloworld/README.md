@@ -1,10 +1,3 @@
-## 準備
-
-serverlessFWのインストール
-```
-npm install -g serverless
-```
-
 ## プロジェクト作成
 
 ディレクトリ作成

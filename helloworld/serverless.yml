@@ -1,6 +1,6 @@
 # CloudFormationのStackの名前になる
 service:
-  name: aws-nodejs-typescript
+  name: aws-nodejs-typescript-helloworld
 
 # ServerlessFWにプラグインを入れる
 plugins:

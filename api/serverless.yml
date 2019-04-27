@@ -1,0 +1,26 @@
+# CloudFormationのStackの名前になる
+service:
+  name: aws-nodejs-typescript-api
+
+# ServerlessFWにプラグインを入れる
+plugins:
+  - serverless-webpack
+  - serverless-offline
+
+# デプロイするクラウドプロバイダと実行環境
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ap-northeast-1
+
+
+# Lambdaのエントリポイント
+functions:
+  # Lambdaの名前
+  hello:
+    # クラスへのPATH:関数名
+    handler: handler.hello
+    events:
+      - http:
+          method: post
+          path: hello

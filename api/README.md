@@ -31,3 +31,9 @@ sls deloy
 ```
 sls remove
 ```
+
+## Lambdaのオフライン実行
+
+```
+sls offline
+```

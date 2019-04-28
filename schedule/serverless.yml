@@ -1,0 +1,22 @@
+service:
+  name: aws-nodejs-typescript-schedule
+
+# Add the serverless-webpack plugin
+plugins:
+  - serverless-webpack
+  - serverless-offline
+  - serverless-offline-scheduler
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ap-northeast-1
+  environment:
+    # コードからアクセスするときの名前: {$opt:コマンドラインから渡すときの引数名}
+    WEBHOOK: ${opt:webhook}
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - schedule: rate(5 minutes)
